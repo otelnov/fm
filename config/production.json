@@ -1,0 +1,10 @@
+{
+  "server": {
+    "NODE_ENV": "production",
+    "SESSION_SECRET": "224tt087a89e01c357856ca6a05f68a5",
+  },
+  "social": {
+    "GOOGLE_CALLBACK_URL": "http://fm.jse.me/api/auth/google/callback",
+    "FACEBOOK_CALLBACK_URL": "http://fm.jse.me/api/auth/facebook/callback"
+  }
+}
