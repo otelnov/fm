@@ -1,3 +1,6 @@
+.idea
+public/libs
+public/uploads
 # Logs
 logs
 *.log

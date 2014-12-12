@@ -1,0 +1,23 @@
+{
+  "server": {
+    "NODE_ENV": "development",
+    "HOST": "localhost",
+    "PORT": 8855,
+    "SESSION_SECRET": "434tt087a89e01c357856ca6a05f68a5",
+    "MONGO_DB": "mongodb://localhost/fm"
+  },
+  "social": {
+    "GOOGLE_SCOPE": [
+      "https://www.googleapis.com/auth/userinfo.profile",
+      "https://www.googleapis.com/auth/userinfo.email"
+    ],
+    "GOOGLE_CLIENT_ID": "367102459442-gu4uobe257h87ea2nb1jbj7sktu2voar.apps.googleusercontent.com",
+    "GOOGLE_CLIENT_SECRET": "NVsRhGyJtfxxyu0wASd-OOOT",
+    "GOOGLE_CALLBACK_URL": "http://local.fm.com/api/auth/google/callback",
+
+    "FACEBOOK_SCOPE": "email",
+    "FACEBOOK_APP_ID": "750214228404445",
+    "FACEBOOK_APP_SECRET": "6b368cd475e01e3e6ebf76092628a991",
+    "FACEBOOK_CALLBACK_URL": "http://local.fm.com/api/auth/facebook/callback"
+  }
+}

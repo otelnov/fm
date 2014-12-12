@@ -1,0 +1,28 @@
+{
+  "name": "footman",
+  "main": "index.js",
+  "version": "0.0.1",
+  "homepage": "http://fm.com",
+  "authors": [
+    "Oleksandr Telnov <mail@telnov.com>"
+  ],
+  "description": "description",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "angular": "~1.3.0",
+    "underscore": "~1.7.0",
+    "angular-ui-router": "~0.2.11",
+    "angular-resource": "~1.3.0",
+    "angular-sanitize": "~1.3.0",
+    "jquery": "~2.1.1",
+    "angular-touch": "~1.3.0",
+    "angular-bootstrap": "~0.11.2",
+    "bootstrap": "~3.2.0"
+  }
+}
