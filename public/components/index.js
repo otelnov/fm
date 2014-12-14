@@ -1,13 +1,13 @@
-angular.module('js.general', []);
-angular.module('js.page', []);
+angular.module('fm.general', []);
+angular.module('fm.pages', []);
 
-angular.module('js.modules', [
-  'js.general', 'js.page'
+angular.module('fm.modules', [
+  'fm.general', 'fm.pages'
 ]);
 
-var app = angular.module('js.app', [
+var app = angular.module('fm.app', [
   'ui.router',
-  'js.modules',
+  'fm.modules',
   'ui.bootstrap',
   'ngResource'
 ]);
@@ -31,10 +31,10 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
     $locationProvider.html5Mode(true);
     $locationProvider.hashPrefix('!');
 
-    $urlRouterProvider.otherwise("/page");
+    $urlRouterProvider.otherwise("/");
 
     $stateProvider
-      .state('js', {
+      .state('fm', {
         abstract: true,
         resolve: {
           user: function($http, $q){
@@ -50,11 +50,11 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
           '@': {
             templateUrl: '/components/general/layout.html'
           },
-          'header@jse': {
+          'header@fm': {
             templateUrl: '/components/general/header.html',
             controller: 'HeaderController'
           },
-          'footer@jse': {
+          'footer@fm': {
             templateUrl: '/components/general/footer.html',
             controller: 'FooterController'
           }
@@ -79,10 +79,16 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
         },
         page: {}
       })
-      .state('js.page', {
-        url: '/page',
-        templateUrl: '/components/page/page.html',
-        controller: 'PageController',
+      .state('fm.dash', {
+        url: '/',
+        templateUrl: '/components/dash/dash.html',
+        controller: 'DashController',
+        page: {}
+      })
+      .state('fm.tournament', {
+        url: '/tournament/:id',
+        templateUrl: '/components/tournaments/tournament.html',
+        controller: 'DashController',
         page: {}
       });
   }]);

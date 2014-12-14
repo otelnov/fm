@@ -11,7 +11,8 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
   <!--<link href="img/ios/apple-touch-icon-120x120.png" sizes="120x120" rel="apple-touch-icon">-->
   <!--<link href="img/ios/apple-touch-icon-76x76.png" sizes="76x76" rel="apple-touch-icon">-->
-  <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="css/bootswatch.min.css"/>
   <link rel="stylesheet" href="css/main.css"/>
   <title>title</title>
   <meta name="author" content="Oleksandr Telnov">
@@ -19,7 +20,7 @@
   <meta property="og:image" content="img/logo.jpg">
 </head>
 
-<body ng-app="js.app">
+<body ng-app="fm.app">
 
   <ui-view></ui-view>
 
@@ -45,8 +46,8 @@
   <script type="text/javascript" src="components/general/footerController.js"></script>
 
   <!--pages-->
-  <script type="text/javascript" src="components/page/pageController.js"></script>
-  <script type="text/javascript" src="components/page/pageService.js"></script>
+  <script type="text/javascript" src="components/dash/dashController.js"></script>
+  <!--<script type="text/javascript" src="components/dash/dashService.js"></script>-->
 
 </body>
 </html>

@@ -1,4 +1,4 @@
-angular.module('js.page')
+angular.module('fm.pages')
   .service('PageService', [
     '$resource',
     function pageService($resource) {

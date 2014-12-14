@@ -26,7 +26,7 @@ module.exports = function(){
       ref: "Teams"
     }],
     stage: { type: String, enum: [ 'qualification', 'playoff', 'group' ] },
-    status: { type: String, enum: [ 'inProgress', 'closed' ] }
+    status: { type: String, enum: [ 'waiting', 'inProgress', 'closed' ] }
   });
 
   mongoose.model('Tournaments', TournamentsSchema, 'Tournaments');

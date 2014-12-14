@@ -1,7 +1,7 @@
-angular.module('js.general')
+angular.module('fm.general')
   .controller('HeaderController', [
-
-    function(){
-
+    "user", '$scope',
+    function(user, $scope){
+      $scope.user = user;
     }
   ]);
