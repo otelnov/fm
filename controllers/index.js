@@ -5,6 +5,6 @@ module.exports = function (app) {
   var router = app.get('router');
 
   require('./users')(app);
-  //require('./page')(app);
+  require('./tournaments')(app);
 
 };

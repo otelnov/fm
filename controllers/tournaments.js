@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 var Tournaments = mongoose.model('Tournaments');
+var TournamentTypes = mongoose.model('TournamentTypes');
 
 module.exports = function (app) {
   'use strict';
@@ -7,9 +8,15 @@ module.exports = function (app) {
   var router = app.get('router');
 
   router.get('/tournaments/:id', function(req, res) {
-    var id = req.query.id;
-    Tournaments.findById(id).lean().exec(function (err, t) {
+    var id = req.params.id;
+    Tournaments.findById(id).populate('tournamentType').lean().exec(function (err, t) {
       res.json({ success: !err, data: {tournament: t}, error: err });
+    });
+  });
+
+  router.get('/tournamentTypes', function(req, res) {
+    TournamentTypes.find().lean().exec(function (err, tt) {
+      res.json({ success: !err, data: {types: tt}, error: err });
     });
   });
   //  .delete(function(req, res) {
@@ -34,8 +41,8 @@ module.exports = function (app) {
     t.tournamentType = req.body.type;
     t.creator = req.user.id;
     t.status = 'waiting';
-    t.save(function(err) {
-      res.json({ success: !err, data: {page: t}, error: err });
+    t.save(function(err, tournament) {
+      res.json({ success: !err, data: {tournament: tournament}, error: err });
     });
   });
   //  .get(function(req, res) {

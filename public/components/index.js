@@ -88,7 +88,13 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
       .state('fm.tournament', {
         url: '/tournament/:id',
         templateUrl: '/components/tournaments/tournament.html',
-        controller: 'DashController',
+        controller: 'TournamentController',
+        page: {}
+      })
+      .state('fm.newTournament', {
+        url: '/createTournament',
+        templateUrl: '/components/tournaments/createTournament.html',
+        controller: 'CreateTournamentController',
         page: {}
       });
   }]);

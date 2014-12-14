@@ -1,0 +1,26 @@
+<h1 class="text-center">Create tournament</h1>
+
+<form class="form-horizontal">
+  <fieldset>
+    <!--<legend>Tournament params:</legend>-->
+    <div class="form-group">
+      <label for="inputTitle" class="col-lg-2 control-label">Title</label>
+      <div class="col-lg-10">
+        <input type="text" ng-model="model.title" class="form-control" id="inputTitle" placeholder="Title">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="select" class="col-lg-2 control-label">Type</label>
+      <div class="col-lg-10">
+        <select class="form-control" ng-model="model.type" ng-options="type.title for type in types" id="select"></select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button class="btn btn-default" ui-sref="fn.dash">Cancel</button>
+        <button type="submit" class="btn btn-primary" ng-click="create()">Create</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
