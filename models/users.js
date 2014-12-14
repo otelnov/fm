@@ -23,6 +23,13 @@ module.exports = function(){
       type: Date,
       default: Date.now
     },
+    params: {
+      team: {
+        type: Schema.Types.ObjectId,
+        index: true,
+        ref: "Teams"
+      }
+    },
     provider: String,
     providerId:  String,
     isEnabled: {
